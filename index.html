@@ -1,1 +1,206 @@
-"" style.css script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Company Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+  <div class="header">
+    <span>COMPANY NAME</span>
+    <h1>Registration Form</h1>
+  </div>
+
+  <div class="form-no">FORM NO: <strong>57</strong></div>
+
+  <form id="registrationForm">
+
+    <!-- PERSONAL INFORMATION -->
+    <div class="section">
+      <div class="section-title">PERSONAL INFORMATION</div>
+
+      <div class="row">
+        <div class="field full">
+          <label>FULL NAME</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>GENDER</label>
+          <div class="options">
+            <label><input type="radio" name="gender" required> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>DATE OF BIRTH</label>
+          <input type="date" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>NATIONALITY</label>
+          <input type="text" required>
+        </div>
+
+        <div class="field">
+          <label>PLACE OF BIRTH</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>RESIDENTIAL STATUS</label>
+          <div class="options">
+            <label><input type="radio" name="residence" required> Residence</label>
+            <label><input type="radio" name="residence"> Non Residence</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>RELIGION</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>MARITAL STATUS</label>
+          <div class="options">
+            <label><input type="radio" name="marital" required> Single</label>
+            <label><input type="radio" name="marital"> Married</label>
+            <label><input type="radio" name="marital"> Widowed</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>NATIONAL ID NO</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field half">
+          <label>TIN NO</label>
+          <input type="text" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT INFORMATION -->
+    <div class="section">
+      <div class="section-title">CONTACT INFORMATION</div>
+
+      <div class="row">
+        <div class="field full">
+          <label>ADDRESS</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>CITY</label>
+          <input type="text" required>
+        </div>
+
+        <div class="field">
+          <label>STATE</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>ZIP CODE</label>
+          <input type="text" required>
+        </div>
+
+        <div class="field">
+          <label>COUNTRY</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>PHONE</label>
+          <input type="tel" required>
+        </div>
+
+        <div class="field">
+          <label>EMAIL</label>
+          <input type="email" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICE INFORMATION -->
+    <div class="section">
+      <div class="section-title">SERVICE INFORMATION</div>
+
+      <div class="row">
+        <div class="field full">
+          <label>SERVICE NAME</label>
+          <input type="text" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field full">
+          <label>PAYMENT DETAIL</label>
+          <div class="options">
+            <label><input type="radio" name="payment" required> Cash</label>
+            <label><input type="radio" name="payment"> Debit Card</label>
+            <label><input type="radio" name="payment"> Credit Card</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field full">
+          <label>COMMENTS</label>
+          <textarea required></textarea>
+        </div>
+      </div>
+
+      <div class="submit-wrapper">
+        <button type="submit">Submit Form</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<!-- MODALS -->
+<div class="modal" id="confirmModal">
+  <div class="modal-box">
+    <h3>Confirm Submission</h3>
+    <p>Are you sure you want to submit this form?</p>
+    <div class="modal-buttons">
+      <button class="yes" id="yesBtn">Yes</button>
+      <button class="no" id="noBtn">No</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="successModal">
+  <div class="modal-box">
+    <h3>🎉 Success</h3>
+    <p>Your response has been submitted successfully.</p>
+    <button class="yes" id="okBtn">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
